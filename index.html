@@ -421,6 +421,32 @@
   footer .frow{margin-top:14px;display:flex;flex-wrap:wrap;gap:8px 20px;}
   footer .final-cta{margin-top:26px;}
 
+  /* スマホ固定CTA */
+  .sticky-cta{display:none;}
+  @media (max-width:640px){
+    body{padding-bottom:76px;}
+    .sticky-cta{
+      display:flex;align-items:center;gap:10px;
+      position:fixed;left:0;right:0;bottom:0;z-index:60;
+      background:var(--line-green);
+      padding:12px 14px;
+      box-shadow:0 -6px 20px rgba(19,42,68,.25);
+    }
+    .sticky-cta.hidden{display:none;}
+    .sticky-cta a{
+      flex:1;
+      display:flex;align-items:center;justify-content:center;gap:8px;
+      color:#fff;font-weight:700;font-size:.92rem;
+      text-decoration:none;
+    }
+    .sticky-cta a svg{width:20px;height:20px;flex:none;}
+    .sticky-cta button{
+      flex:none;
+      background:rgba(255,255,255,.2);border:none;border-radius:50%;
+      width:28px;height:28px;color:#fff;font-size:1rem;line-height:1;cursor:pointer;
+    }
+  }
+
   /* reveal animation */
   .reveal{opacity:0;transform:translateY(16px);transition:opacity .6s ease, transform .6s ease;}
   .reveal.in{opacity:1;transform:none;}
@@ -451,7 +477,7 @@
 <header class="hero">
   <div class="wrap" style="display:flex;justify-content:center;">
     <a href="https://lin.ee/suZz0dHn" target="_blank" rel="noopener" style="display:block;width:100%;">
-      <img src="https://static.wixstatic.com/media/622821_dcb2ddcaaa9b4d0684a84e5bd50308f8~mv2.png" alt="伸生スクラップ カーメンテナンス。忙しくても、愛車を忘れない。国家資格の整備士がLINEでサポート。友だち追加で作業工賃1,000円引き。まずはLINEで無料登録" style="width:100%;height:auto;display:block;border-radius:14px;box-shadow:0 24px 60px -24px rgba(19,42,68,.4);">
+      <img src="https://static.wixstatic.com/media/622821_5a9ad035bc5f476cb05381fd01ba3a39~mv2.jpg" alt="伸生スクラップ カーメンテナンス。忙しくても、愛車を忘れない。国家資格の整備士がLINEでサポート。友だち追加で作業工賃1,000円引き。まずはLINEで無料登録" style="width:100%;height:auto;display:block;border-radius:14px;box-shadow:0 24px 60px -24px rgba(19,42,68,.4);">
     </a>
   </div>
 </header>
@@ -461,7 +487,7 @@
 <section>
   <div class="wrap">
     <div class="img-slot reveal" style="height:auto;margin-bottom:34px;">
-      <img src="https://static.wixstatic.com/media/622821_f9d96a71f0a44d9eb80883626f67aa6c~mv2.png" alt="オイル交換を先延ばしにすると、こんな出費に。エンジンオーバーホール費用30万円〜70万円" style="height:auto;object-fit:contain;border-radius:10px;">
+      <img src="https://static.wixstatic.com/media/622821_a7440439bc8a444a9496a7fb552cbebd~mv2.jpg" alt="オイル交換を先延ばしにすると、こんな出費に。エンジンオーバーホール費用30万円〜70万円" style="height:auto;object-fit:contain;border-radius:10px;">
     </div>
     <div class="reveal" style="max-width:36em;">
       <p style="color:var(--ink-soft);">オイル交換はエンジンを守るための一番シンプルなメンテナンスです。交換時期をうっかり忘れてしまうことが、いちばんの落とし穴になります。</p>
@@ -474,7 +500,7 @@
 <section class="dark">
   <div class="wrap">
     <div class="img-slot reveal" style="height:auto;">
-      <img src="https://static.wixstatic.com/media/622821_218cd3c1f6014c35bb96f79522effc02~mv2.png" alt="見落としがちな期限。車検切れで運転すると、どうなるか知っていますか。無車検運行のリスクと、およそ300台に1台が気づかず運転している実態" style="height:auto;object-fit:contain;border-radius:10px;">
+      <img src="https://static.wixstatic.com/media/622821_8b6d9b81bf8c409089be8368e23a3ee9~mv2.jpg" alt="見落としがちな期限。車検切れで運転すると、どうなるか知っていますか。無車検運行のリスクと、およそ300台に1台が気づかず運転している実態" style="height:auto;object-fit:contain;border-radius:10px;">
     </div>
   </div>
 </section>
@@ -489,7 +515,7 @@
         <li>工賃込みで1ℓ950円からの安心価格</li>
         <li>車検の期日をLINEで自動通知</li>
         <li>LINEから予約・相談がそのまま完結</li>
-        <li>代車手配や引取サービスも柔軟に対応</li>
+        <li>代車手配や引取サービスも柔軟に対応（車検・整備をご利用の場合）</li>
         <li>友だち追加だけで作業工賃が1,000円引きに</li>
       </ul>
       <div class="coupon-strip">
@@ -509,14 +535,14 @@
 <section class="price-section">
   <div class="wrap">
     <div class="img-slot reveal" style="height:auto;margin-bottom:36px;">
-      <img src="https://static.wixstatic.com/media/622821_bd20c849634f48a39d8a333a2667eaa1~mv2.png" alt="料金表 — 車検費用。車両クラス別の目安料金。軽自動車34,690円〜、普通車〜1t 45,700円〜、1t〜1.5t 55,550円〜、1.5t〜2t 66,050円〜。LINE友だち登録で作業工賃1,000円引き" style="height:auto;object-fit:contain;border-radius:10px;">
+      <img src="https://static.wixstatic.com/media/622821_89862e2f98534a3cb383e6116151c480~mv2.jpg" alt="料金表 — 車検費用。車両クラス別の目安料金。軽自動車34,690円〜、普通車〜1t 45,700円〜、1t〜1.5t 55,550円〜、1.5t〜2t 66,050円〜。LINE友だち登録で作業工賃1,000円引き" style="height:auto;object-fit:contain;border-radius:10px;">
     </div>
 
     <p style="margin-top:28px;margin-bottom:0;color:var(--ink-soft);font-size:.92rem;">車検とあわせて、オイル交換も明瞭価格でご案内しています。</p>
 
     <!-- 画像を追加する場合: 下のdivを <img src="ファイル名.jpg" alt="説明"> に差し替えてください -->
     <div class="img-slot reveal" style="margin-top:20px;min-height:0;height:auto;">
-      <img src="https://static.wixstatic.com/media/622821_d24aa14e1d94479bbcd35c8bd8f0caab~mv2.png" alt="オイル交換1リットル950円（工賃込み）LINE登録で更にお得に" style="height:auto;object-fit:contain;">
+      <img src="https://static.wixstatic.com/media/622821_7dcc0329105b4b8e8272faa162633b5e~mv2.jpg" alt="オイル交換1リットル950円（工賃込み）LINE登録で更にお得に" style="height:auto;object-fit:contain;">
     </div>
     <div class="oil-cards reveal">
       <div class="oil-card">
@@ -542,7 +568,7 @@
 <section class="dark">
   <div class="wrap">
     <div class="img-slot reveal" style="height:auto;margin-bottom:34px;">
-      <img src="https://static.wixstatic.com/media/622821_49fc91f2d389410ca15e0155824b3139~mv2.png" alt="部品取付工賃表。持込部品の取付もOK。電装品・外装灯火類の工賃一覧" style="height:auto;object-fit:contain;border-radius:10px;">
+      <img src="https://static.wixstatic.com/media/622821_34ab315ecd8e405381950704e01ea212~mv2.jpg" alt="部品取付工賃表。持込部品の取付もOK。電装品・外装灯火類の工賃一覧" style="height:auto;object-fit:contain;border-radius:10px;">
     </div>
     <div class="parts-grid reveal">
       <div class="part-chip"><span>ドアミラー(1個)</span><span class="p">3,000円〜</span></div>
@@ -574,7 +600,7 @@
 <section class="dark">
   <div class="wrap">
     <div class="img-slot reveal" style="height:auto;">
-      <img src="https://static.wixstatic.com/media/622821_e20a1c20d876479fa2b0a8cbcbee62c7~mv2.png" alt="通知機能。うっかり忘れをLINEが防ぎます。車検の時期・オイル交換時期を自動通知" style="height:auto;object-fit:contain;border-radius:10px;">
+      <img src="https://static.wixstatic.com/media/622821_4f362fceafd14bc9b1a13b49c19923b5~mv2.jpg" alt="通知機能。うっかり忘れをLINEが防ぎます。車検の時期・オイル交換時期を自動通知" style="height:auto;object-fit:contain;border-radius:10px;">
     </div>
   </div>
 </section>
@@ -616,7 +642,7 @@
 <section>
   <div class="wrap">
     <div class="img-slot reveal" style="height:auto;margin-bottom:24px;">
-      <img src="https://static.wixstatic.com/media/622821_b72685228ef74ba7b1acc2605e5d0d7d~mv2.png" alt="廃車も、LINEで簡単査定。ご相談から買取までの流れと概算査定額の例" style="height:auto;object-fit:contain;border-radius:10px;">
+      <img src="https://static.wixstatic.com/media/622821_27c83c3652ec440caf010a39785970dd~mv2.jpg" alt="廃車も、LINEで簡単査定。ご相談から買取までの流れと概算査定額の例" style="height:auto;object-fit:contain;border-radius:10px;">
     </div>
     <div class="reveal" style="max-width:640px;">
       <p style="font-size:.82rem;color:var(--muted);">※買取は店舗へのお持ち込みに限ります（出張引き取りは行っておりません）</p>
@@ -634,9 +660,11 @@
 <!-- USED CARS -->
 <section>
   <div class="wrap">
-    <div class="img-slot reveal" style="height:auto;margin-bottom:34px;">
+    <div class="img-slot reveal" style="height:auto;margin-bottom:34px;position:relative;padding:0;">
       <!-- 画像を追加する場合: 下のimgのsrcに、この画像を公開した先のURLを入れてください -->
-      <img src="https://static.wixstatic.com/media/622821_92f8de590a9d4e62ae23d366d49c1e2a~mv2.png" alt="中古車販売。中古車も絶賛販売中です。在庫車両ラインナップ・お探しの1台のご相談" style="height:auto;object-fit:contain;">
+      <img src="https://static.wixstatic.com/media/622821_bceb9fa5aa574fe1b30d2ac574669343~mv2.jpg" alt="中古車販売。中古車も絶賛販売中です。在庫車両ラインナップ・お探しの1台のご相談" style="height:auto;object-fit:contain;display:block;">
+      <a href="https://www.carsensor.net/shop/osaka/309380001/stocklist/?BKKN=AU4680785896&amp;BKKNTR=1" target="_blank" rel="noopener" aria-label="在庫一覧を見る（Carsensor）" style="position:absolute;left:1.98%;top:46.91%;width:47.07%;height:7.72%;"></a>
+      <a href="https://lin.ee/suZz0dHn" target="_blank" rel="noopener" aria-label="LINEで相談する" style="position:absolute;left:1.98%;top:75.42%;width:47.07%;height:7.72%;"></a>
     </div>
     <div class="used-grid reveal">
       <a class="used-link-btn" href="https://www.carsensor.net/shop/osaka/309380001/stocklist/?BKKN=AU4680785896&amp;BKKNTR=1" target="_blank" rel="noopener">
@@ -749,6 +777,15 @@
   </div>
 </footer>
 
+<!-- スマホ固定CTA -->
+<div class="sticky-cta" id="stickyCta">
+  <a href="https://lin.ee/suZz0dHn" target="_blank" rel="noopener">
+    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 5.94 2 10.8c0 3.4 2.32 6.36 5.72 7.86-.14.5-.9 3.1-.93 3.32 0 0-.02.16.08.22.1.06.22.02.22.02.3-.04 3.4-2.24 3.94-2.62.64.1 1.3.14 1.97.14 5.52 0 10-3.94 10-8.8S17.52 2 12 2z"/></svg>
+    友だち追加で工賃1,000円引き
+  </a>
+  <button type="button" id="stickyCtaClose" aria-label="閉じる">×</button>
+</div>
+
 <script>
   // scroll reveal
   const items = document.querySelectorAll('.reveal');
@@ -811,6 +848,19 @@
     renderCal();
   });
   renderCal();
+
+  // スマホ固定CTA（閉じたら次回以降も非表示）
+  const stickyCta = document.getElementById('stickyCta');
+  const stickyCtaClose = document.getElementById('stickyCtaClose');
+  try {
+    if (localStorage.getItem('stickyCtaDismissed') === '1') {
+      stickyCta.classList.add('hidden');
+    }
+  } catch (err) {}
+  stickyCtaClose.addEventListener('click', () => {
+    stickyCta.classList.add('hidden');
+    try { localStorage.setItem('stickyCtaDismissed', '1'); } catch (err) {}
+  });
 </script>
 </body>
 </html>
