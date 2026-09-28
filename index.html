@@ -27,6 +27,7 @@
 <meta name="twitter:card" content="summary_large_image">
 
 <!-- ===== 構造化データ①：Googleにお店の情報を伝える ===== -->
+<!-- ▼ 変更：電話番号と営業時間をGoogleマップと同じにしました -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -35,7 +36,7 @@
   "description": "堺市美原区の自動車整備工場。車検・オイル交換・部品取付・廃車買取・中古車販売。LINEで交換時期・車検時期をお知らせします。",
   "url": "https://shinseiexport-sudo.github.io/shinsei-scrap-lp/",
   "image": "https://static.wixstatic.com/media/622821_5a9ad035bc5f476cb05381fd01ba3a39~mv2.jpg",
-  "telephone": "072-236-3131",
+  "telephone": "072-361-3131",
   "address": {
     "@type": "PostalAddress",
     "addressCountry": "JP",
@@ -51,8 +52,8 @@
   "openingHoursSpecification": [{
     "@type": "OpeningHoursSpecification",
     "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"],
-    "opens": "08:45",
-    "closes": "17:30"
+    "opens": "08:30",
+    "closes": "17:15"
   }],
   "areaServed": ["堺市", "大阪府"],
   "priceRange": "¥¥",
@@ -60,7 +61,7 @@
 }
 </script>
 
-<!-- ▼ 追加：構造化データ②：よくあるご質問（FAQ）をGoogleに伝える -->
+<!-- ===== 構造化データ②：よくあるご質問（FAQ）をGoogleに伝える ===== -->
 <!--    ※ページ下部のFAQの文章と同じ内容にしてあります。FAQを書き換えたら、ここも同じように書き換えてください。 -->
 <script type="application/ld+json">
 {
@@ -744,7 +745,6 @@
   <div class="wrap">
     <div class="section-head compact reveal">
       <p class="eyebrow">Scrap Car</p>
-      <!-- ▼ 変更：「堺市」を入れて地域キーワードを強化 -->
       <h2>堺市の廃車買取もLINEで簡単査定</h2>
     </div>
     <div class="img-slot reveal" style="height:auto;margin-bottom:24px;">
@@ -807,7 +807,6 @@
       </details>
       <details class="faq-item">
         <summary><span><span class="q-mark">Q.</span>廃車買取は出張査定・引き取りもしてもらえますか？</span><span class="icon">+</span></summary>
-        <!-- ▼ 変更：質問への答え（できない）を最初に書くように並べ替え -->
         <p class="faq-a">出張査定・出張引き取りは行っておりません。LINE内の回答フォームに答えていただくと、その場で概算金額が案内されます。査定後にしつこい営業のご連絡をすることは一切ありません。金額にご納得いただけた場合のみ、店舗へお持ち込みください。</p>
       </details>
       <details class="faq-item">
@@ -833,7 +832,8 @@
       <div class="hours-col reveal">
         <div class="hours-card">
           <dl>
-            <dt>営業時間</dt><dd>8:45〜17:30</dd>
+            <!-- ▼ 変更：営業時間をGoogleマップと同じにしました -->
+            <dt>営業時間</dt><dd>8:30〜17:15</dd>
             <dt>定休日</dt><dd>土曜・日曜・祝日ほか（下のカレンダー参照）</dd>
           </dl>
           <p class="hours-note">最新の定休日は、LINEでもお気軽にお問い合わせください。</p>
@@ -878,9 +878,10 @@
     <div class="fname">株式会社伸生スクラップ</div>
     <div class="frow">
       <span>大阪府堺市美原区木材通4-15-15</span>
-      <!-- スマホでタップすると電話がかけられるリンク -->
-      <span>TEL <a href="tel:0722363131">072-236-3131</a></span>
-      <span>営業時間 8:45〜17:30（土日祝休・不定休あり）</span>
+      <!-- ▼ 変更：電話番号をGoogleマップと同じにしました（スマホでタップすると電話がかけられます） -->
+      <span>TEL <a href="tel:0723613131">072-361-3131</a></span>
+      <!-- ▼ 変更：営業時間をGoogleマップと同じにしました -->
+      <span>営業時間 8:30〜17:15（土日祝休・不定休あり）</span>
     </div>
     <a class="cta-line final-cta" href="https://lin.ee/suZz0dHn" target="_blank" rel="noopener">
       <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 5.94 2 10.8c0 3.4 2.32 6.36 5.72 7.86-.14.5-.9 3.1-.93 3.32 0 0-.02.16.08.22.1.06.22.02.22.02.3-.04 3.4-2.24 3.94-2.62.64.1 1.3.14 1.97.14 5.52 0 10-3.94 10-8.8S17.52 2 12 2z"/></svg>
