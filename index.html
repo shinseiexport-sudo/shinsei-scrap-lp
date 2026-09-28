@@ -3,7 +3,57 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>伸生スクラップ｜LINEで安心メンテ</title>
+<title>堺市美原区の車検・オイル交換｜伸生スクラップ｜LINEで安心メンテ</title>
+
+<!-- ===== SEO：検索結果に表示される説明文 ===== -->
+<meta name="description" content="堺市美原区の車検・オイル交換なら伸生スクラップ。オイル交換は工賃込み1ℓ950円から。LINEで交換時期・車検時期を自動でお知らせ。友だち登録で作業工賃1,000円引き。廃車買取・中古車販売も。">
+
+<!-- ===== SEO：このページの正式なURL ===== -->
+<link rel="canonical" href="https://shinseiexport-sudo.github.io/shinsei-scrap-lp/">
+
+<!-- ===== LINE・SNSで共有したときの表示（OGP） ===== -->
+<meta property="og:title" content="伸生スクラップ｜堺市美原区の車検・オイル交換">
+<meta property="og:description" content="オイル交換は工賃込み1ℓ950円から。LINEで交換時期を自動リマインド。友だち登録で作業工賃1,000円引き。">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://shinseiexport-sudo.github.io/shinsei-scrap-lp/">
+<meta property="og:image" content="https://static.wixstatic.com/media/622821_5a9ad035bc5f476cb05381fd01ba3a39~mv2.jpg">
+<meta property="og:site_name" content="伸生スクラップ">
+<meta property="og:locale" content="ja_JP">
+<meta name="twitter:card" content="summary_large_image">
+
+<!-- ===== 構造化データ：Googleにお店の情報を伝える ===== -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "AutoRepair",
+  "name": "株式会社伸生スクラップ",
+  "url": "https://shinseiexport-sudo.github.io/shinsei-scrap-lp/",
+  "image": "https://static.wixstatic.com/media/622821_5a9ad035bc5f476cb05381fd01ba3a39~mv2.jpg",
+  "telephone": "072-236-3131",
+  "address": {
+    "@type": "PostalAddress",
+    "addressCountry": "JP",
+    "addressRegion": "大阪府",
+    "addressLocality": "堺市美原区",
+    "streetAddress": "木材通4-15-15"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 34.51238,
+    "longitude": 135.57907
+  },
+  "openingHoursSpecification": [{
+    "@type": "OpeningHoursSpecification",
+    "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"],
+    "opens": "08:00",
+    "closes": "17:30"
+  }],
+  "areaServed": ["堺市", "大阪府"],
+  "priceRange": "¥¥",
+  "sameAs": ["https://lin.ee/suZz0dHn"]
+}
+</script>
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@500;700;900&family=Oswald:wght@500;600;700&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
@@ -59,7 +109,7 @@
       radial-gradient(1100px 500px at 85% -10%, rgba(59,147,245,.16), transparent 60%),
       var(--paper);
     color:var(--ink);
-    padding:64px 0 56px;
+    padding:40px 0 56px;
     position:relative;
     overflow:hidden;
   }
@@ -71,22 +121,19 @@
     transform:rotate(-3deg);
     opacity:.7;
   }
-  .hero .wrap{position:relative;z-index:1;display:grid;grid-template-columns:1.15fr .85fr;gap:40px;align-items:center;}
-  @media (max-width:860px){ .hero .wrap{grid-template-columns:1fr;} .hero .img-slot{order:-1;min-height:200px;} }
+  .hero .wrap{position:relative;z-index:1;}
   .hero .eyebrow{color:var(--blue-deep);}
-  .hero h1{
-    font-size:clamp(2rem,5.4vw,3.4rem);
+
+  /* ▼ 追加：ページの一番大きい見出し（H1） */
+  .hero-title{
+    font-size:clamp(1.15rem,2.6vw,1.6rem);
     color:var(--ink);
-    margin-top:14px;
-    line-height:1.35;
+    line-height:1.5;
+    text-align:center;
+    margin:0 0 20px;
   }
-  .hero h1 .accent{color:var(--blue);}
-  .hero p.lead{
-    margin-top:20px;
-    font-size:1.05rem;
-    color:var(--ink-soft);
-    max-width:34em;
-  }
+  .hero-title .accent{color:var(--blue-deep);}
+
   .badge-row{display:flex;flex-wrap:wrap;gap:10px;margin-top:26px;}
   .badge{
     border:1px solid rgba(59,147,245,.45);
@@ -115,7 +162,7 @@
   .cta-line svg{width:22px;height:22px;flex:none;}
   .cta-sub{display:block;margin-top:10px;font-size:.8rem;color:var(--muted);}
 
-  /* ---------- 画像スロット（あとで <img> に差し替える枠） ---------- */
+  /* ---------- 画像スロット ---------- */
   .img-slot{
     border:2px dashed rgba(59,147,245,.5);
     border-radius:10px;
@@ -137,7 +184,6 @@
     box-shadow:0 2px 14px rgba(19,42,68,.06);
     overflow:hidden;
   }
-  .hero .img-slot{min-height:280px;}
 
   /* ---------- SECTION generic ---------- */
   section{padding:64px 0;}
@@ -146,8 +192,11 @@
   .section-head .eyebrow{color:var(--blue-deep);}
   .dark .section-head .eyebrow{color:var(--blue-deep);}
   .section-head h2{font-size:clamp(1.4rem,3vw,1.9rem);margin-top:10px;}
+  /* ▼ 追加：画像の上に置く小さめの見出し */
+  .section-head.compact{margin-bottom:20px;}
+  .section-head.compact h2{font-size:clamp(1.15rem,2.4vw,1.45rem);}
 
-  /* ---------- TAG component (signature element) ---------- */
+  /* ---------- TAG component ---------- */
   .tag{
     position:relative;
     background:var(--paper);
@@ -168,27 +217,15 @@
   .tag.warn{border-left-color:var(--red);}
   .tag.warn .tag-label{color:var(--red);}
 
-  /* Problem: cost warning tag */
   .cost-block{display:grid;grid-template-columns:1.1fr 1fr;gap:28px;align-items:center;}
-  .cost-figure{
-    text-align:center;
-    padding:30px 20px;
-  }
-  .cost-figure .num{
-    font-size:clamp(2.4rem,6vw,3.6rem);
-    color:var(--red);
-    line-height:1;
-  }
+  .cost-figure{ text-align:center; padding:30px 20px; }
+  .cost-figure .num{ font-size:clamp(2.4rem,6vw,3.6rem); color:var(--red); line-height:1; }
   .cost-figure .num small{font-size:.42em;font-weight:600;margin-left:4px;color:var(--ink-soft);}
   .cost-figure p{margin-top:12px;color:var(--ink-soft);font-size:.92rem;}
 
-  /* Risk list */
   .risk-grid{display:grid;grid-template-columns:1fr 1fr;gap:22px;}
   .risk-list{list-style:none;margin:0;padding:0;display:grid;gap:14px;}
-  .risk-list li{
-    display:flex;gap:12px;align-items:flex-start;
-    font-weight:500;
-  }
+  .risk-list li{ display:flex;gap:12px;align-items:flex-start; font-weight:500; }
   .risk-list li::before{
     content:"!";
     flex:none;
@@ -207,7 +244,6 @@
   .dark .stat-tag .tag-label{color:var(--blue-deep);}
   .dark .stat-tag .num{color:var(--blue-deep);}
 
-  /* Checklist / work order card */
   .order-card{
     background:var(--paper);
     border:1px dashed rgba(59,147,245,.5);
@@ -216,7 +252,7 @@
     color:var(--ink);
     box-shadow:0 2px 14px rgba(19,42,68,.06);
   }
-  .order-card h3{color:var(--blue-deep);font-size:1.15rem;margin-bottom:18px;}
+  .order-card h2{color:var(--blue-deep);font-size:1.15rem;margin-bottom:18px;}
   .check-grid{list-style:none;margin:0;padding:0;display:grid;gap:14px;}
   .check-grid li{display:flex;gap:12px;align-items:flex-start;font-size:.96rem;}
   .check-grid li::before{
@@ -237,7 +273,6 @@
     font-weight:900;font-size:.82rem;font-family:'Oswald',sans-serif;margin-top:1px;
   }
 
-  /* Coupon */
   .coupon-strip{
     margin-top:34px;
     display:flex;flex-wrap:wrap;gap:20px;align-items:center;justify-content:space-between;
@@ -251,7 +286,6 @@
   .coupon-text{font-weight:700;font-size:1.05rem;}
   .coupon-text small{display:block;font-weight:500;font-size:.82rem;margin-top:2px;}
 
-  /* Price tags */
   .price-section .section-head{max-width:none;}
   .price-tabs{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:8px;}
   .price-tag{
@@ -290,7 +324,6 @@
   .oil-card .price .num{font-size:1.6rem;color:var(--blue-deep);}
   .oil-card .price small{display:block;font-size:.72rem;color:var(--muted);}
 
-  /* Parts grid */
   .parts-grid{
     margin-top:36px;
     display:grid;grid-template-columns:repeat(4,1fr);
@@ -307,13 +340,11 @@
   .price-note{margin-top:18px;font-size:.78rem;color:var(--muted);}
   .dark .price-note{color:var(--muted);}
 
-  /* Notify */
   .notify-grid{display:grid;grid-template-columns:1fr 1fr;gap:22px;}
   .notify-card{background:var(--paper);border:1px solid var(--paper-2);border-left:6px solid var(--line-green);border-radius:var(--radius);padding:24px;}
   .notify-card h3{font-size:1.05rem;margin-bottom:8px;}
   .notify-card p{font-size:.9rem;color:var(--ink-soft);margin:0;}
 
-  /* Reviews */
   .review-summary{display:flex;align-items:center;gap:14px;margin-bottom:28px;flex-wrap:wrap;}
   .review-summary .num{font-family:'Oswald',sans-serif;font-weight:700;font-size:2rem;color:var(--blue-deep);}
   .review-summary .stars{color:var(--blue);letter-spacing:2px;font-size:1.1rem;}
@@ -328,7 +359,6 @@
   .review-card p{font-size:.88rem;color:var(--ink-soft);margin:0;flex:1;}
   .review-meta{font-size:.78rem;color:var(--muted);font-family:'Oswald',sans-serif;}
 
-  /* FAQ */
   .faq-list{display:grid;gap:12px;}
   .faq-item{background:var(--paper);border:1px solid var(--paper-2);border-radius:8px;overflow:hidden;}
   .faq-item summary{
@@ -345,7 +375,6 @@
   .faq-item[open] summary .icon{transform:rotate(45deg);}
   .faq-item .faq-a{padding:0 22px 20px 52px;font-size:.9rem;color:var(--ink-soft);}
 
-  /* used cars */
   .used-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:10px;}
   .used-link-btn{
     display:flex;align-items:center;justify-content:center;gap:8px;
@@ -360,7 +389,6 @@
   .used-link-btn:hover{background:var(--navy-2);transform:translateY(-1px);}
   .used-link-btn svg{width:18px;height:18px;flex:none;}
 
-  /* 営業日案内 */
   .hours-layout{display:grid;grid-template-columns:1fr 1fr;gap:24px;align-items:start;}
   .hours-col{display:grid;gap:16px;}
   .hours-card{
@@ -386,7 +414,7 @@
     font-size:.68rem;letter-spacing:.12em;color:var(--blue-deep);
     font-family:'Oswald',sans-serif;text-transform:uppercase;
   }
-  .cal-card h4{margin:10px 0 14px;font-size:.95rem;}
+  .cal-card h3{margin:10px 0 14px;font-size:.95rem;}
   .cal-nav{display:flex;align-items:center;justify-content:space-between;margin-bottom:10px;}
   .cal-nav button{
     background:var(--paper-2);border:none;border-radius:6px;
@@ -415,13 +443,12 @@
     display:block;
   }
 
-  /* footer */
   footer{background:var(--blue-deep);color:#CFE2FB;padding:44px 0 36px;font-size:.85rem;}
   footer .fname{color:#fff;font-weight:700;font-size:1rem;font-family:'Zen Kaku Gothic New',sans-serif;}
   footer .frow{margin-top:14px;display:flex;flex-wrap:wrap;gap:8px 20px;}
+  footer .frow a{color:#CFE2FB;}
   footer .final-cta{margin-top:26px;}
 
-  /* スマホ固定CTA */
   .sticky-cta{display:none;}
   @media (max-width:640px){
     body{padding-bottom:76px;}
@@ -447,7 +474,6 @@
     }
   }
 
-  /* reveal animation */
   .reveal{opacity:0;transform:translateY(16px);transition:opacity .6s ease, transform .6s ease;}
   .reveal.in{opacity:1;transform:none;}
 
@@ -475,9 +501,12 @@
 
 <!-- HERO -->
 <header class="hero">
-  <div class="wrap" style="display:flex;justify-content:center;">
+  <div class="wrap">
+    <!-- ▼ 追加：ページの一番大きい見出し（H1） -->
+    <h1 class="hero-title">堺市美原区の<span class="accent">車検・オイル交換</span>なら伸生スクラップ<br>LINEで交換時期をお知らせ</h1>
     <a href="https://lin.ee/suZz0dHn" target="_blank" rel="noopener" style="display:block;width:100%;">
-      <img src="https://static.wixstatic.com/media/622821_5a9ad035bc5f476cb05381fd01ba3a39~mv2.jpg" alt="伸生スクラップ カーメンテナンス。忙しくても、愛車を忘れない。国家資格の整備士がLINEでサポート。友だち追加で作業工賃1,000円引き。まずはLINEで無料登録" style="width:100%;height:auto;display:block;border-radius:14px;box-shadow:0 24px 60px -24px rgba(19,42,68,.4);">
+      <!-- 一番上の画像は最優先で読み込む（lazyにしない） -->
+      <img src="https://static.wixstatic.com/media/622821_5a9ad035bc5f476cb05381fd01ba3a39~mv2.jpg" alt="伸生スクラップ カーメンテナンス。忙しくても、愛車を忘れない。国家資格の整備士がLINEでサポート。友だち追加で作業工賃1,000円引き。まずはLINEで無料登録" fetchpriority="high" decoding="async" style="width:100%;height:auto;display:block;border-radius:14px;box-shadow:0 24px 60px -24px rgba(19,42,68,.4);">
     </a>
   </div>
 </header>
@@ -486,8 +515,12 @@
 <!-- PROBLEM: cost -->
 <section>
   <div class="wrap">
+    <div class="section-head compact reveal">
+      <p class="eyebrow">Oil Change</p>
+      <h2>オイル交換を先延ばしにすると、こんな出費に</h2>
+    </div>
     <div class="img-slot reveal" style="height:auto;margin-bottom:34px;">
-      <img src="https://static.wixstatic.com/media/622821_a7440439bc8a444a9496a7fb552cbebd~mv2.jpg" alt="オイル交換を先延ばしにすると、こんな出費に。エンジンオーバーホール費用30万円〜70万円" style="height:auto;object-fit:contain;border-radius:10px;">
+      <img src="https://static.wixstatic.com/media/622821_a7440439bc8a444a9496a7fb552cbebd~mv2.jpg" alt="オイル交換を先延ばしにすると、こんな出費に。エンジンオーバーホール費用30万円〜70万円" loading="lazy" decoding="async" style="height:auto;object-fit:contain;border-radius:10px;">
     </div>
     <div class="reveal" style="max-width:36em;">
       <p style="color:var(--ink-soft);">オイル交換はエンジンを守るための一番シンプルなメンテナンスです。交換時期をうっかり忘れてしまうことが、いちばんの落とし穴になります。</p>
@@ -499,8 +532,12 @@
 <!-- RISK: shaken -->
 <section class="dark">
   <div class="wrap">
+    <div class="section-head compact reveal">
+      <p class="eyebrow">Shaken</p>
+      <h2>車検切れに気づかず運転していませんか？</h2>
+    </div>
     <div class="img-slot reveal" style="height:auto;">
-      <img src="https://static.wixstatic.com/media/622821_8b6d9b81bf8c409089be8368e23a3ee9~mv2.jpg" alt="見落としがちな期限。車検切れで運転すると、どうなるか知っていますか。無車検運行のリスクと、およそ300台に1台が気づかず運転している実態" style="height:auto;object-fit:contain;border-radius:10px;">
+      <img src="https://static.wixstatic.com/media/622821_8b6d9b81bf8c409089be8368e23a3ee9~mv2.jpg" alt="見落としがちな期限。車検切れで運転すると、どうなるか知っていますか。無車検運行のリスクと、およそ300台に1台が気づかず運転している実態" loading="lazy" decoding="async" style="height:auto;object-fit:contain;border-radius:10px;">
     </div>
   </div>
 </section>
@@ -509,7 +546,7 @@
 <section class="dark" style="padding-top:0;">
   <div class="wrap">
     <div class="order-card reveal">
-      <h3>そのリスク、私たちがしっかりサポートします</h3>
+      <h2>そのリスク、私たちがしっかりサポートします</h2>
       <ul class="check-grid">
         <li>面倒なスケジュール管理は不要。LINEで交換時期をリマインド</li>
         <li>工賃込みで1ℓ950円からの安心価格</li>
@@ -534,15 +571,18 @@
 <!-- PRICE: shaken -->
 <section class="price-section">
   <div class="wrap">
+    <div class="section-head compact reveal">
+      <p class="eyebrow">Price</p>
+      <h2>車検・オイル交換の料金</h2>
+    </div>
     <div class="img-slot reveal" style="height:auto;margin-bottom:36px;">
-      <img src="https://static.wixstatic.com/media/622821_89862e2f98534a3cb383e6116151c480~mv2.jpg" alt="料金表 — 車検費用。車両クラス別の目安料金。軽自動車34,690円〜、普通車〜1t 45,700円〜、1t〜1.5t 55,550円〜、1.5t〜2t 66,050円〜。LINE友だち登録で作業工賃1,000円引き" style="height:auto;object-fit:contain;border-radius:10px;">
+      <img src="https://static.wixstatic.com/media/622821_89862e2f98534a3cb383e6116151c480~mv2.jpg" alt="料金表 — 車検費用。車両クラス別の目安料金。軽自動車34,690円〜、普通車〜1t 45,700円〜、1t〜1.5t 55,550円〜、1.5t〜2t 66,050円〜。LINE友だち登録で作業工賃1,000円引き" loading="lazy" decoding="async" style="height:auto;object-fit:contain;border-radius:10px;">
     </div>
 
     <p style="margin-top:28px;margin-bottom:0;color:var(--ink-soft);font-size:.92rem;">車検とあわせて、オイル交換も明瞭価格でご案内しています。</p>
 
-    <!-- 画像を追加する場合: 下のdivを <img src="ファイル名.jpg" alt="説明"> に差し替えてください -->
     <div class="img-slot reveal" style="margin-top:20px;min-height:0;height:auto;">
-      <img src="https://static.wixstatic.com/media/622821_7dcc0329105b4b8e8272faa162633b5e~mv2.jpg" alt="オイル交換1リットル950円（工賃込み）LINE登録で更にお得に" style="height:auto;object-fit:contain;">
+      <img src="https://static.wixstatic.com/media/622821_7dcc0329105b4b8e8272faa162633b5e~mv2.jpg" alt="オイル交換1リットル950円（工賃込み）LINE登録で更にお得に" loading="lazy" decoding="async" style="height:auto;object-fit:contain;">
     </div>
     <div class="oil-cards reveal">
       <div class="oil-card">
@@ -567,8 +607,12 @@
 <!-- PARTS -->
 <section class="dark">
   <div class="wrap">
+    <div class="section-head compact reveal">
+      <p class="eyebrow">Parts</p>
+      <h2>部品取付の工賃（持込部品もOK）</h2>
+    </div>
     <div class="img-slot reveal" style="height:auto;margin-bottom:34px;">
-      <img src="https://static.wixstatic.com/media/622821_34ab315ecd8e405381950704e01ea212~mv2.jpg" alt="部品取付工賃表。持込部品の取付もOK。電装品・外装灯火類の工賃一覧" style="height:auto;object-fit:contain;border-radius:10px;">
+      <img src="https://static.wixstatic.com/media/622821_34ab315ecd8e405381950704e01ea212~mv2.jpg" alt="部品取付工賃表。持込部品の取付もOK。電装品・外装灯火類の工賃一覧" loading="lazy" decoding="async" style="height:auto;object-fit:contain;border-radius:10px;">
     </div>
     <div class="parts-grid reveal">
       <div class="part-chip"><span>ドアミラー(1個)</span><span class="p">3,000円〜</span></div>
@@ -599,8 +643,12 @@
 <!-- NOTIFY -->
 <section class="dark">
   <div class="wrap">
+    <div class="section-head compact reveal">
+      <p class="eyebrow">LINE Notice</p>
+      <h2>車検・オイル交換の時期をLINEで自動通知</h2>
+    </div>
     <div class="img-slot reveal" style="height:auto;">
-      <img src="https://static.wixstatic.com/media/622821_4f362fceafd14bc9b1a13b49c19923b5~mv2.jpg" alt="通知機能。うっかり忘れをLINEが防ぎます。車検の時期・オイル交換時期を自動通知" style="height:auto;object-fit:contain;border-radius:10px;">
+      <img src="https://static.wixstatic.com/media/622821_4f362fceafd14bc9b1a13b49c19923b5~mv2.jpg" alt="通知機能。うっかり忘れをLINEが防ぎます。車検の時期・オイル交換時期を自動通知" loading="lazy" decoding="async" style="height:auto;object-fit:contain;border-radius:10px;">
     </div>
   </div>
 </section>
@@ -641,8 +689,12 @@
 <!-- SCRAP BUYBACK -->
 <section>
   <div class="wrap">
+    <div class="section-head compact reveal">
+      <p class="eyebrow">Scrap Car</p>
+      <h2>廃車買取もLINEで簡単査定</h2>
+    </div>
     <div class="img-slot reveal" style="height:auto;margin-bottom:24px;">
-      <img src="https://static.wixstatic.com/media/622821_27c83c3652ec440caf010a39785970dd~mv2.jpg" alt="廃車も、LINEで簡単査定。ご相談から買取までの流れと概算査定額の例" style="height:auto;object-fit:contain;border-radius:10px;">
+      <img src="https://static.wixstatic.com/media/622821_27c83c3652ec440caf010a39785970dd~mv2.jpg" alt="廃車も、LINEで簡単査定。ご相談から買取までの流れと概算査定額の例" loading="lazy" decoding="async" style="height:auto;object-fit:contain;border-radius:10px;">
     </div>
     <div class="reveal" style="max-width:640px;">
       <p style="font-size:.82rem;color:var(--muted);">※買取は店舗へのお持ち込みに限ります（出張引き取りは行っておりません）</p>
@@ -660,9 +712,12 @@
 <!-- USED CARS -->
 <section>
   <div class="wrap">
+    <div class="section-head compact reveal">
+      <p class="eyebrow">Used Cars</p>
+      <h2>中古車販売</h2>
+    </div>
     <div class="img-slot reveal" style="height:auto;margin-bottom:34px;position:relative;padding:0;">
-      <!-- 画像を追加する場合: 下のimgのsrcに、この画像を公開した先のURLを入れてください -->
-      <img src="https://static.wixstatic.com/media/622821_bceb9fa5aa574fe1b30d2ac574669343~mv2.jpg" alt="中古車販売。中古車も絶賛販売中です。在庫車両ラインナップ・お探しの1台のご相談" style="height:auto;object-fit:contain;display:block;">
+      <img src="https://static.wixstatic.com/media/622821_bceb9fa5aa574fe1b30d2ac574669343~mv2.jpg" alt="中古車販売。中古車も絶賛販売中です。在庫車両ラインナップ・お探しの1台のご相談" loading="lazy" decoding="async" style="height:auto;object-fit:contain;display:block;">
       <a href="https://www.carsensor.net/shop/osaka/309380001/stocklist/?BKKN=AU4680785896&amp;BKKNTR=1" target="_blank" rel="noopener" aria-label="在庫一覧を見る（Carsensor）" style="position:absolute;left:1.98%;top:46.91%;width:47.07%;height:7.72%;"></a>
       <a href="https://lin.ee/suZz0dHn" target="_blank" rel="noopener" aria-label="LINEで相談する" style="position:absolute;left:1.98%;top:75.42%;width:47.07%;height:7.72%;"></a>
     </div>
@@ -723,14 +778,14 @@
         <div class="hours-card">
           <dl>
             <dt>営業時間</dt><dd>8:00〜17:30</dd>
-            <dt>定休日</dt><dd>土曜・日曜・祝日ほか（右のカレンダー参照）</dd>
+            <dt>定休日</dt><dd>土曜・日曜・祝日ほか（下のカレンダー参照）</dd>
           </dl>
           <p class="hours-note">最新の定休日は、LINEでもお気軽にお問い合わせください。</p>
         </div>
 
         <div class="cal-card">
           <p class="tag-label">Regular Holiday Calendar</p>
-          <h4>定休日カレンダー</h4>
+          <h3>定休日カレンダー</h3>
           <div class="cal-nav">
             <button id="calPrev" type="button" aria-label="前の月">‹</button>
             <div class="cal-month-label" id="calMonthLabel">2026年8月</div>
@@ -767,7 +822,8 @@
     <div class="fname">株式会社伸生スクラップ</div>
     <div class="frow">
       <span>大阪府堺市美原区木材通4-15-15</span>
-      <span>TEL 072-236-3131</span>
+      <!-- スマホでタップすると電話がかけられるリンク -->
+      <span>TEL <a href="tel:0722363131">072-236-3131</a></span>
       <span>営業時間 8:00〜17:30（土日祝休・不定休あり）</span>
     </div>
     <a class="cta-line final-cta" href="https://lin.ee/suZz0dHn" target="_blank" rel="noopener">
@@ -809,7 +865,13 @@
     '2026-12': [5,6,12,13,19,20,27,28,29,30,31]
   };
   const calKeys = Object.keys(closedData);
-  let calYear = 2026, calMonth = 8;
+
+  // ▼ 変更：今月のデータがあれば今月から表示、なければ最初の月から表示
+  const today = new Date();
+  const todayKey = today.getFullYear() + '-' + (today.getMonth() + 1);
+  const startKey = closedData[todayKey] ? todayKey : calKeys[0];
+  let calYear  = Number(startKey.split('-')[0]);
+  let calMonth = Number(startKey.split('-')[1]);
 
   function renderCal(){
     const key = calYear + '-' + calMonth;
