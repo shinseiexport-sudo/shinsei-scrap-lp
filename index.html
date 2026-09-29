@@ -17,6 +17,7 @@
 <link rel="canonical" href="https://shinseiexport-sudo.github.io/shinsei-scrap-lp/">
 
 <!-- ===== LINE・SNSで共有したときの表示（OGP） ===== -->
+<!-- ※LINEやSNSはWebP非対応の場合があるので、ここはJPGのままにしています -->
 <meta property="og:title" content="伸生スクラップ｜堺市美原区の車検・オイル交換">
 <meta property="og:description" content="オイル交換は工賃込み1ℓ950円から。LINEで交換時期を自動リマインド。友だち登録で作業工賃1,000円引き。">
 <meta property="og:type" content="website">
@@ -112,9 +113,18 @@
 }
 </script>
 
+<!-- ▼ 変更（高速化）：一番上のメイン画像を最優先で読み込むよう、ブラウザに先に知らせる -->
+<link rel="preload" as="image" href="hero-main.webp" type="image/webp" fetchpriority="high">
+
+<!-- ▼ 変更（高速化）：Googleフォントの読み込み方を変更 -->
+<!--   ・使っていない太さ（Zen Kaku Gothic New の500）を削除して、ダウンロード量を減らしました -->
+<!--   ・フォントの読み込みを待たずに、先に文字を表示するようにしました（表示のブロックを解消） -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@500;700;900&family=Oswald:wght@500;600;700&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@700;900&family=Oswald:wght@500;600;700&family=Noto+Sans+JP:wght@400;500;700&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@700;900&family=Oswald:wght@500;600;700&family=Noto+Sans+JP:wght@400;500;700&display=swap" media="print" onload="this.media='all'">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@700;900&family=Oswald:wght@500;600;700&family=Noto+Sans+JP:wght@400;500;700&display=swap"></noscript>
+
 <style>
   :root{
     --navy:#1B66C9;
@@ -138,12 +148,13 @@
     margin:0;
     background:var(--paper);
     color:var(--ink);
-    font-family:'Noto Sans JP',sans-serif;
+    /* ▼ 変更（高速化）：フォント読み込み中もきれいに見えるよう、パソコン・スマホ標準の日本語フォントを予備に指定 */
+    font-family:'Noto Sans JP','Hiragino Sans','Hiragino Kaku Gothic ProN','Yu Gothic','Meiryo',sans-serif;
     line-height:1.75;
     -webkit-font-smoothing:antialiased;
   }
   h1,h2,h3,.disp{
-    font-family:'Zen Kaku Gothic New',sans-serif;
+    font-family:'Zen Kaku Gothic New','Hiragino Sans','Yu Gothic','Meiryo',sans-serif;
     font-weight:900;
     letter-spacing:.02em;
     margin:0;
@@ -157,6 +168,8 @@
   }
   .num{ font-family:'Oswald',sans-serif; font-weight:700; }
   img{max-width:100%;display:block;}
+  /* ▼ 変更（高速化）：WebP対応のために画像を<picture>で囲んだので、見た目が変わらないよう設定 */
+  picture{display:block;width:100%;}
   a{color:inherit;}
   .wrap{max-width:1040px;margin:0 auto;padding:0 24px;}
   .stripe-bar{ height:14px; background: var(--stripe); }
@@ -502,7 +515,7 @@
   }
 
   footer{background:var(--blue-deep);color:#CFE2FB;padding:44px 0 36px;font-size:.85rem;}
-  footer .fname{color:#fff;font-weight:700;font-size:1rem;font-family:'Zen Kaku Gothic New',sans-serif;}
+  footer .fname{color:#fff;font-weight:700;font-size:1rem;font-family:'Zen Kaku Gothic New','Hiragino Sans','Yu Gothic','Meiryo',sans-serif;}
   footer .frow{margin-top:14px;display:flex;flex-wrap:wrap;gap:8px 20px;}
   footer .frow a{color:#CFE2FB;}
   footer .final-cta{margin-top:26px;}
@@ -564,7 +577,11 @@
     <h1 class="hero-title">堺市美原区の<span class="accent">車検・オイル交換</span>なら伸生スクラップ<br>LINEで交換時期をお知らせ</h1>
     <a href="https://lin.ee/suZz0dHn" target="_blank" rel="noopener" style="display:block;width:100%;">
       <!-- 一番上の画像は最優先で読み込む（lazyにしない） -->
-      <img src="hero-main.jpg" alt="伸生スクラップ カーメンテナンス。忙しくても、愛車を忘れない。国家資格の整備士がLINEでサポート。友だち追加で作業工賃1,000円引き。まずはLINEで無料登録" fetchpriority="high" decoding="async" style="width:100%;height:auto;display:block;border-radius:14px;box-shadow:0 24px 60px -24px rgba(19,42,68,.4);">
+      <!-- ▼ 変更（高速化）：WebP画像を優先して表示。WebP非対応のブラウザではJPGを表示 -->
+      <picture>
+        <source srcset="hero-main.webp" type="image/webp">
+        <img src="hero-main.jpg" alt="伸生スクラップ カーメンテナンス。忙しくても、愛車を忘れない。国家資格の整備士がLINEでサポート。友だち追加で作業工賃1,000円引き。まずはLINEで無料登録" fetchpriority="high" style="width:100%;height:auto;display:block;border-radius:14px;box-shadow:0 24px 60px -24px rgba(19,42,68,.4);">
+      </picture>
     </a>
   </div>
 </header>
@@ -578,7 +595,10 @@
       <h2>オイル交換を先延ばしにすると、こんな出費に</h2>
     </div>
     <div class="img-slot reveal" style="height:auto;margin-bottom:34px;">
-      <img src="oil-risk.jpg" alt="オイル交換を先延ばしにすると、こんな出費に。エンジンオーバーホール費用30万円〜70万円" loading="lazy" decoding="async" style="height:auto;object-fit:contain;border-radius:10px;">
+      <picture>
+        <source srcset="oil-risk.webp" type="image/webp">
+        <img src="oil-risk.jpg" alt="オイル交換を先延ばしにすると、こんな出費に。エンジンオーバーホール費用30万円〜70万円" loading="lazy" decoding="async" style="height:auto;object-fit:contain;border-radius:10px;">
+      </picture>
     </div>
     <div class="reveal" style="max-width:36em;">
       <p style="color:var(--ink-soft);">オイル交換はエンジンを守るための一番シンプルなメンテナンスです。交換時期をうっかり忘れてしまうことが、いちばんの落とし穴になります。</p>
@@ -595,7 +615,10 @@
       <h2>車検切れに気づかず運転していませんか？</h2>
     </div>
     <div class="img-slot reveal" style="height:auto;">
-      <img src="shaken-risk.jpg" alt="見落としがちな期限。車検切れで運転すると、どうなるか知っていますか。無車検運行のリスクと、およそ300台に1台が気づかず運転している実態" loading="lazy" decoding="async" style="height:auto;object-fit:contain;border-radius:10px;">
+      <picture>
+        <source srcset="shaken-risk.webp" type="image/webp">
+        <img src="shaken-risk.jpg" alt="見落としがちな期限。車検切れで運転すると、どうなるか知っていますか。無車検運行のリスクと、およそ300台に1台が気づかず運転している実態" loading="lazy" decoding="async" style="height:auto;object-fit:contain;border-radius:10px;">
+      </picture>
     </div>
   </div>
 </section>
@@ -634,13 +657,19 @@
       <h2>車検・オイル交換の料金</h2>
     </div>
     <div class="img-slot reveal" style="height:auto;margin-bottom:36px;">
-      <img src="price-shaken.jpg" alt="料金表 — 車検費用。車両クラス別の目安料金。軽自動車34,690円〜、普通車〜1t 45,700円〜、1t〜1.5t 55,550円〜、1.5t〜2t 66,050円〜。LINE友だち登録で作業工賃1,000円引き" loading="lazy" decoding="async" style="height:auto;object-fit:contain;border-radius:10px;">
+      <picture>
+        <source srcset="price-shaken.webp" type="image/webp">
+        <img src="price-shaken.jpg" alt="料金表 — 車検費用。車両クラス別の目安料金。軽自動車34,690円〜、普通車〜1t 45,700円〜、1t〜1.5t 55,550円〜、1.5t〜2t 66,050円〜。LINE友だち登録で作業工賃1,000円引き" loading="lazy" decoding="async" style="height:auto;object-fit:contain;border-radius:10px;">
+      </picture>
     </div>
 
     <p style="margin-top:28px;margin-bottom:0;color:var(--ink-soft);font-size:.92rem;">車検とあわせて、オイル交換も明瞭価格でご案内しています。</p>
 
     <div class="img-slot reveal" style="margin-top:20px;min-height:0;height:auto;">
-      <img src="price-oil.jpg" alt="オイル交換1リットル950円（工賃込み）LINE登録で更にお得に" loading="lazy" decoding="async" style="height:auto;object-fit:contain;">
+      <picture>
+        <source srcset="price-oil.webp" type="image/webp">
+        <img src="price-oil.jpg" alt="オイル交換1リットル950円（工賃込み）LINE登録で更にお得に" loading="lazy" decoding="async" style="height:auto;object-fit:contain;">
+      </picture>
     </div>
     <div class="oil-cards reveal">
       <div class="oil-card">
@@ -670,7 +699,10 @@
       <h2>部品取付の工賃（持込部品もOK）</h2>
     </div>
     <div class="img-slot reveal" style="height:auto;margin-bottom:34px;">
-      <img src="price-parts.jpg" alt="部品取付工賃表。持込部品の取付もOK。電装品・外装灯火類の工賃一覧" loading="lazy" decoding="async" style="height:auto;object-fit:contain;border-radius:10px;">
+      <picture>
+        <source srcset="price-parts.webp" type="image/webp">
+        <img src="price-parts.jpg" alt="部品取付工賃表。持込部品の取付もOK。電装品・外装灯火類の工賃一覧" loading="lazy" decoding="async" style="height:auto;object-fit:contain;border-radius:10px;">
+      </picture>
     </div>
     <div class="parts-grid reveal">
       <div class="part-chip"><span>ドアミラー(1個)</span><span class="p">3,000円〜</span></div>
@@ -706,7 +738,10 @@
       <h2>車検・オイル交換の時期をLINEで自動通知</h2>
     </div>
     <div class="img-slot reveal" style="height:auto;">
-      <img src="line-notify.jpg" alt="通知機能。うっかり忘れをLINEが防ぎます。車検の時期・オイル交換時期を自動通知" loading="lazy" decoding="async" style="height:auto;object-fit:contain;border-radius:10px;">
+      <picture>
+        <source srcset="line-notify.webp" type="image/webp">
+        <img src="line-notify.jpg" alt="通知機能。うっかり忘れをLINEが防ぎます。車検の時期・オイル交換時期を自動通知" loading="lazy" decoding="async" style="height:auto;object-fit:contain;border-radius:10px;">
+      </picture>
     </div>
   </div>
 </section>
@@ -748,7 +783,10 @@
       <h2>堺市の廃車買取もLINEで簡単査定</h2>
     </div>
     <div class="img-slot reveal" style="height:auto;margin-bottom:24px;">
-      <img src="haisha.jpg" alt="廃車も、LINEで簡単査定。ご相談から買取までの流れと概算査定額の例" loading="lazy" decoding="async" style="height:auto;object-fit:contain;border-radius:10px;">
+      <picture>
+        <source srcset="haisha.webp" type="image/webp">
+        <img src="haisha.jpg" alt="廃車も、LINEで簡単査定。ご相談から買取までの流れと概算査定額の例" loading="lazy" decoding="async" style="height:auto;object-fit:contain;border-radius:10px;">
+      </picture>
     </div>
     <div class="reveal" style="max-width:640px;">
       <p style="font-size:.82rem;color:var(--muted);">※買取は店舗へのお持ち込みに限ります（出張引き取りは行っておりません）</p>
@@ -771,7 +809,10 @@
       <h2>中古車販売</h2>
     </div>
     <div class="img-slot reveal" style="height:auto;margin-bottom:34px;position:relative;padding:0;">
-      <img src="used-cars.jpg" alt="中古車販売。中古車も絶賛販売中です。在庫車両ラインナップ・お探しの1台のご相談" loading="lazy" decoding="async" style="height:auto;object-fit:contain;display:block;">
+      <picture>
+        <source srcset="used-cars.webp" type="image/webp">
+        <img src="used-cars.jpg" alt="中古車販売。中古車も絶賛販売中です。在庫車両ラインナップ・お探しの1台のご相談" loading="lazy" decoding="async" style="height:auto;object-fit:contain;display:block;">
+      </picture>
       <a href="https://www.carsensor.net/shop/osaka/309380001/stocklist/?BKKN=AU4680785896&amp;BKKNTR=1" target="_blank" rel="noopener" aria-label="在庫一覧を見る（Carsensor）" style="position:absolute;left:1.98%;top:46.91%;width:47.07%;height:7.72%;"></a>
       <a href="https://lin.ee/suZz0dHn" target="_blank" rel="noopener" aria-label="LINEで相談する" style="position:absolute;left:1.98%;top:75.42%;width:47.07%;height:7.72%;"></a>
     </div>
