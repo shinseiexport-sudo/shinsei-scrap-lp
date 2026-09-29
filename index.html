@@ -116,14 +116,13 @@
 <!-- ▼ 変更（高速化）：一番上のメイン画像を最優先で読み込むよう、ブラウザに先に知らせる -->
 <link rel="preload" as="image" href="hero-main.webp" type="image/webp" fetchpriority="high">
 
-<!-- ▼ 変更（高速化）：Googleフォントの読み込み方を変更 -->
-<!--   ・使っていない太さ（Zen Kaku Gothic New の500）を削除して、ダウンロード量を減らしました -->
-<!--   ・フォントの読み込みを待たずに、先に文字を表示するようにしました（表示のブロックを解消） -->
+<!-- ▼ 変更（高速化）：Googleフォントを大幅に軽くしました -->
+<!--   ・本文用の「Noto Sans JP」の読み込みをやめ、スマホ・パソコンに最初から入っている日本語フォントで表示します -->
+<!--   ・見出し用の「Zen Kaku Gothic New」は、実際に使っている太さ（900）だけにしました -->
+<!--   ・数字・英字用の「Oswald」は軽いのでそのまま残しています -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@700;900&family=Oswald:wght@500;600;700&family=Noto+Sans+JP:wght@400;500;700&display=swap">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@700;900&family=Oswald:wght@500;600;700&family=Noto+Sans+JP:wght@400;500;700&display=swap" media="print" onload="this.media='all'">
-<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@700;900&family=Oswald:wght@500;600;700&family=Noto+Sans+JP:wght@400;500;700&display=swap"></noscript>
+<link href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@900&family=Oswald:wght@500;600;700&display=swap" rel="stylesheet">
 
 <style>
   :root{
@@ -148,8 +147,9 @@
     margin:0;
     background:var(--paper);
     color:var(--ink);
-    /* ▼ 変更（高速化）：フォント読み込み中もきれいに見えるよう、パソコン・スマホ標準の日本語フォントを予備に指定 */
-    font-family:'Noto Sans JP','Hiragino Sans','Hiragino Kaku Gothic ProN','Yu Gothic','Meiryo',sans-serif;
+    /* ▼ 変更（高速化）：本文はスマホ・パソコンに最初から入っている日本語フォントで表示（ダウンロード不要） */
+    /*   iPhone・Mac＝ヒラギノ、Windows＝游ゴシック／メイリオ、Android＝Noto Sans CJK */
+    font-family:-apple-system,BlinkMacSystemFont,'Hiragino Sans','Hiragino Kaku Gothic ProN','Yu Gothic Medium','YuGothic','Meiryo','Noto Sans CJK JP','Noto Sans JP',sans-serif;
     line-height:1.75;
     -webkit-font-smoothing:antialiased;
   }
@@ -515,7 +515,7 @@
   }
 
   footer{background:var(--blue-deep);color:#CFE2FB;padding:44px 0 36px;font-size:.85rem;}
-  footer .fname{color:#fff;font-weight:700;font-size:1rem;font-family:'Zen Kaku Gothic New','Hiragino Sans','Yu Gothic','Meiryo',sans-serif;}
+  footer .fname{color:#fff;font-weight:900;font-size:1rem;font-family:'Zen Kaku Gothic New','Hiragino Sans','Yu Gothic','Meiryo',sans-serif;}
   footer .frow{margin-top:14px;display:flex;flex-wrap:wrap;gap:8px 20px;}
   footer .frow a{color:#CFE2FB;}
   footer .final-cta{margin-top:26px;}
@@ -578,9 +578,10 @@
     <a href="https://lin.ee/suZz0dHn" target="_blank" rel="noopener" style="display:block;width:100%;">
       <!-- 一番上の画像は最優先で読み込む（lazyにしない） -->
       <!-- ▼ 変更（高速化）：WebP画像を優先して表示。WebP非対応のブラウザではJPGを表示 -->
+      <!-- ▼ 変更（高速化）：width/heightで画像の縦横比を先に伝え、読み込み時のズレを防ぐ -->
       <picture>
         <source srcset="hero-main.webp" type="image/webp">
-        <img src="hero-main.jpg" alt="伸生スクラップ カーメンテナンス。忙しくても、愛車を忘れない。国家資格の整備士がLINEでサポート。友だち追加で作業工賃1,000円引き。まずはLINEで無料登録" fetchpriority="high" style="width:100%;height:auto;display:block;border-radius:14px;box-shadow:0 24px 60px -24px rgba(19,42,68,.4);">
+        <img src="hero-main.jpg" alt="伸生スクラップ カーメンテナンス。忙しくても、愛車を忘れない。国家資格の整備士がLINEでサポート。友だち追加で作業工賃1,000円引き。まずはLINEで無料登録" width="1400" height="700" fetchpriority="high" style="width:100%;height:auto;display:block;border-radius:14px;box-shadow:0 24px 60px -24px rgba(19,42,68,.4);">
       </picture>
     </a>
   </div>
@@ -597,7 +598,7 @@
     <div class="img-slot reveal" style="height:auto;margin-bottom:34px;">
       <picture>
         <source srcset="oil-risk.webp" type="image/webp">
-        <img src="oil-risk.jpg" alt="オイル交換を先延ばしにすると、こんな出費に。エンジンオーバーホール費用30万円〜70万円" loading="lazy" decoding="async" style="height:auto;object-fit:contain;border-radius:10px;">
+        <img src="oil-risk.jpg" alt="オイル交換を先延ばしにすると、こんな出費に。エンジンオーバーホール費用30万円〜70万円" width="1400" height="692" loading="lazy" decoding="async" style="height:auto;object-fit:contain;border-radius:10px;">
       </picture>
     </div>
     <div class="reveal" style="max-width:36em;">
@@ -617,7 +618,7 @@
     <div class="img-slot reveal" style="height:auto;">
       <picture>
         <source srcset="shaken-risk.webp" type="image/webp">
-        <img src="shaken-risk.jpg" alt="見落としがちな期限。車検切れで運転すると、どうなるか知っていますか。無車検運行のリスクと、およそ300台に1台が気づかず運転している実態" loading="lazy" decoding="async" style="height:auto;object-fit:contain;border-radius:10px;">
+        <img src="shaken-risk.jpg" alt="見落としがちな期限。車検切れで運転すると、どうなるか知っていますか。無車検運行のリスクと、およそ300台に1台が気づかず運転している実態" width="1152" height="922" loading="lazy" decoding="async" style="height:auto;object-fit:contain;border-radius:10px;">
       </picture>
     </div>
   </div>
@@ -659,7 +660,7 @@
     <div class="img-slot reveal" style="height:auto;margin-bottom:36px;">
       <picture>
         <source srcset="price-shaken.webp" type="image/webp">
-        <img src="price-shaken.jpg" alt="料金表 — 車検費用。車両クラス別の目安料金。軽自動車34,690円〜、普通車〜1t 45,700円〜、1t〜1.5t 55,550円〜、1.5t〜2t 66,050円〜。LINE友だち登録で作業工賃1,000円引き" loading="lazy" decoding="async" style="height:auto;object-fit:contain;border-radius:10px;">
+        <img src="price-shaken.jpg" alt="料金表 — 車検費用。車両クラス別の目安料金。軽自動車34,690円〜、普通車〜1t 45,700円〜、1t〜1.5t 55,550円〜、1.5t〜2t 66,050円〜。LINE友だち登録で作業工賃1,000円引き" width="848" height="1264" loading="lazy" decoding="async" style="height:auto;object-fit:contain;border-radius:10px;">
       </picture>
     </div>
 
@@ -668,7 +669,7 @@
     <div class="img-slot reveal" style="margin-top:20px;min-height:0;height:auto;">
       <picture>
         <source srcset="price-oil.webp" type="image/webp">
-        <img src="price-oil.jpg" alt="オイル交換1リットル950円（工賃込み）LINE登録で更にお得に" loading="lazy" decoding="async" style="height:auto;object-fit:contain;">
+        <img src="price-oil.jpg" alt="オイル交換1リットル950円（工賃込み）LINE登録で更にお得に" width="1376" height="768" loading="lazy" decoding="async" style="height:auto;object-fit:contain;">
       </picture>
     </div>
     <div class="oil-cards reveal">
